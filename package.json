@@ -1,0 +1,17 @@
+{
+  "name": "trauko.neocities.org",
+  "description": "My personal website on Neocities, built with 11ty.",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chileangoblin/trauko.neocities.org.git"
+  },
+  "author": "chileangoblin",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.1"
+  }
+}
