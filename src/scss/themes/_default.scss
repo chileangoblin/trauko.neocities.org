@@ -1,0 +1,6 @@
+@use '../abstract/colors';
+
+body {
+    background-color: colors.$bg-color;
+    color: colors.$text-color;
+}
