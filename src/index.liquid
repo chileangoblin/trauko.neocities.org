@@ -1,6 +1,19 @@
 ---
 layout: base.liquid
 ---
-
-<h1>Welcome!</h1>
-<p>This is the first version of this place!</p>
+<div id="app">
+    {% render 'layout/header' %}
+    <div id="main">
+            {% for w in windows %}
+                {% render 'components/window'
+                    windowId: w.id
+                    windowTitle: w.windowTitle
+                    windowHeight: w.windowHeight
+                    windowWidth: w.windowWidth
+                    windowX: w.windowX
+                    windowY: w.windowY
+                    renderPath: w.renderPath
+                %}
+            {% endfor %}
+    </div>
+</div>

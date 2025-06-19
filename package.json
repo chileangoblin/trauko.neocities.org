@@ -2,13 +2,13 @@
   "name": "trauko.neocities.org",
   "description": "My personal website on Neocities, built with 11ty.",
   "scripts": {
-		"watch:sass": "sass --no-source-map --watch src/scss:dist/assets/css",
-		"watch:eleventy": "eleventy --serve",
-		"build:sass": "sass --no-source-map src/scss:dist/assets/css",
-		"build:eleventy": "eleventy",
-		"dev": "npm-run-all build:sass --parallel watch:*",
-		"build": "npm-run-all build:eleventy"
-	},
+    "watch:sass": "sass --no-source-map --watch src/scss:dist/assets/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map src/scss:dist/assets/css",
+    "build:eleventy": "eleventy",
+    "dev": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:eleventy"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chileangoblin/trauko.neocities.org.git"

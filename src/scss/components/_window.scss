@@ -1,0 +1,43 @@
+@use '../abstract/colors';
+
+.window {
+    position: absolute;
+    min-width: 200px;
+}
+
+.window-body {
+    height: fit-content;
+    border-left: 3px solid colors.$border-color;
+    border-right: 3px solid colors.$border-color;
+    border-bottom: 3px solid colors.$border-color;
+    background-color: colors.$bg-color;
+    color: black;
+}
+
+.window-header {
+    display: flex;
+    background-color: colors.$border-color;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    font-size: 1.35rem;
+}
+
+.window-title {
+    user-select: none;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+    height: 24px;
+}
+
+.window-control {
+    cursor: pointer;
+}
+
+.window.dragging {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  cursor: grabbing;
+}

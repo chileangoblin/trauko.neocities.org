@@ -1,0 +1,11 @@
+@use '../abstract/colors';
+
+#header {
+    border-bottom: 2px solid colors.$border-color;
+    padding: 15px 10px;
+    background-color: colors.$border-color;
+}
+
+.header-title {
+    font-size: 2rem;
+}

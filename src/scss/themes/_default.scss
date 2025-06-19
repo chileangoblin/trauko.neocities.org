@@ -1,6 +1,8 @@
 @use '../abstract/colors';
+@use '../abstract/fonts';
 
 body {
     background-color: colors.$bg-color;
     color: colors.$text-color;
+    font-family: fonts.$body-font;
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "windowId": "about",
+        "windowTitle": "About",
+        "windowX": "20px",
+        "windowY": "20px",
+        "renderPath": "partials/default"
+    },
+    {
+        "windowId": "status",
+        "windowTitle": "Status",
+        "windowX": "300px",
+        "windowY": "20px",
+        "renderPath": "partials/status",
+        "windowWidth": "400px"
+    }
+]
