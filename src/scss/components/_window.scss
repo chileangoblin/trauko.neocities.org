@@ -3,6 +3,8 @@
 .window {
     position: absolute;
     min-width: 200px;
+    transition: transform 0.1s ease;
+    transition: box-shadow 0.1s ease;
 }
 
 .window-body {
@@ -21,6 +23,7 @@
     align-items: center;
     padding: 5px 5px;
     font-size: 1.35rem;
+    cursor: grab;
 }
 
 .window-title {
@@ -34,10 +37,16 @@
 }
 
 .window-control {
-    cursor: pointer;
+    cursor: default;
+
+    &:hover {
+        background-color: rgba(black, .1);
+    }
 }
 
 .window.dragging {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  cursor: grabbing;
+  cursor: move;
+  transform: scale(1.05);  /* Or adjust as desired */
+  
 }

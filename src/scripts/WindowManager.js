@@ -1,17 +1,24 @@
 import Window from "./Window.js";
 
-class WindowManager {
-    static windows = new Map();
+export default class WindowManager {
+    constructor() {
+        this.windows = new Map();
+    }
 
-    static init(selector = '.window') {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-            const win = new Window(el);
-            WindowManager.windows.set(win.id, win);
+    /**
+   * @param {HTMLElement} element
+   */
+    registerWindow(element) {
+        const win = new Window(element);
+        this.windows.set(win.id, win);
+        console.log("Registered window!")
+    }
+
+    registerAllWindows() {
+        /** @type {NodeListOf<HTMLElement>} */
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(window => {
+            this.registerWindow(window);
         });
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  WindowManager.init();
-});

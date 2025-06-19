@@ -9,8 +9,8 @@
     {
         "windowId": "status",
         "windowTitle": "Status",
-        "windowX": "300px",
-        "windowY": "20px",
+        "windowX": "30px",
+        "windowY": "30px",
         "renderPath": "partials/status",
         "windowWidth": "400px"
     }
