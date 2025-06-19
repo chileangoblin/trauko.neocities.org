@@ -21,4 +21,15 @@ export default class WindowManager {
             this.registerWindow(window);
         });
     }
+
+    toggleWindowVisibility(id, isVisible) {
+        const win = this.windows.get(id);
+        if (win) {
+            win.toggleVisibility(isVisible);
+        }
+    }
+
+    bindCheckboxes() {
+
+    }
 }

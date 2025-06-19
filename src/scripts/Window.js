@@ -69,11 +69,14 @@ export default class Window {
   bringToFront = () => {
     Window.highestZIndex += 1;
     this.element.style.zIndex = Window.highestZIndex.toString();
-    console.log("Bringing to front!");
   }
 
   toggleExpand = () => {
 
+  }
+
+  toggleVisibility = () => {
+    
   }
 }
 

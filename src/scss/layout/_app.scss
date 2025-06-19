@@ -1,11 +1,21 @@
+@use '../abstract/colors';
+
 #app {
     display: flex;
     height: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #main {
     height: 100%;
     padding: 15px 10px;
     position: relative;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(black, .5);
 }

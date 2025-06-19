@@ -1,4 +1,5 @@
-[
+{
+    "pages": [
     {
         "windowId": "about",
         "windowTitle": "About",
@@ -10,10 +11,29 @@
     {
         "windowId": "status",
         "windowTitle": "Status",
-        "windowX": "30px",
-        "windowY": "30px",
+        "windowX": "300px",
+        "windowY": "20px",
         "renderPath": "partials/status",
         "windowWidth": "400px",
         "visible": true
+    },
+    {
+        "windowId": "precious",
+        "windowTitle": "My Precious",
+        "windowX": "720px",
+        "windowY": "20px",
+        "renderPath": "partials/finds",
+        "visible": false
     }
-]
+    ],
+    "widgets": [
+        {
+            "windowId": "exampleWidget",
+            "windowTitle": "Example Widget",
+            "windowX": "720px",
+            "windowY": "20px",
+            "renderPath": "partials/default",
+            "visible": false
+        }
+    ]
+}

@@ -7,7 +7,7 @@
 {% assign renderPath = renderPath | default: "partials/default" %}
 {% assign visible = visible %}
 
-<div class="window {% unless visible %}hidden{% endunless %}" data-id="{{ windowId }}" 
+<div class="window{% unless visible %} hidden{% endunless %}" data-id="{{ windowId }}" 
      style="width: {{ windowWidth }}; height: {{ windowHeight }}; left: {{ windowX }}; top: {{ windowY }}">
     <div class="window-header">
         <div class="window-title">

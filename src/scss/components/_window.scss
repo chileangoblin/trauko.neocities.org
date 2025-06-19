@@ -42,6 +42,10 @@
 
 .window-control {
     cursor: default;
+    border: 1.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background-color: rgba(black, .1);
