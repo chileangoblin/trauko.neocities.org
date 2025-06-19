@@ -7,6 +7,10 @@
     transition: box-shadow 0.1s ease;
 }
 
+.hidden {
+    display: none;
+}
+
 .window-body {
     height: fit-content;
     border-left: 3px solid colors.$border-color;
@@ -23,7 +27,7 @@
     align-items: center;
     padding: 5px 5px;
     font-size: 1.35rem;
-    cursor: grab;
+
 }
 
 .window-title {
@@ -46,7 +50,7 @@
 
 .window.dragging {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  cursor: move;
+
   transform: scale(1.05);  /* Or adjust as desired */
   
 }

@@ -6,13 +6,14 @@ layout: base.liquid
     <div id="main">
             {% for w in windows %}
                 {% render 'components/window'
-                    windowId: w.id
+                    windowId: w.windowId
                     windowTitle: w.windowTitle
                     windowHeight: w.windowHeight
                     windowWidth: w.windowWidth
                     windowX: w.windowX
                     windowY: w.windowY
                     renderPath: w.renderPath
+                    visible: w.visible
                 %}
             {% endfor %}
     </div>

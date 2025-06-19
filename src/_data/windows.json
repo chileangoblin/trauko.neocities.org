@@ -4,7 +4,8 @@
         "windowTitle": "About",
         "windowX": "20px",
         "windowY": "20px",
-        "renderPath": "partials/default"
+        "renderPath": "partials/default",
+        "visible": true
     },
     {
         "windowId": "status",
@@ -12,6 +13,7 @@
         "windowX": "30px",
         "windowY": "30px",
         "renderPath": "partials/status",
-        "windowWidth": "400px"
+        "windowWidth": "400px",
+        "visible": true
     }
 ]
