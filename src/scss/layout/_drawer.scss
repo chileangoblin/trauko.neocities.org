@@ -73,11 +73,18 @@
   }
 }
 
+.drawer-toggle {
+  height: 36px;
+  &:hover {
+        background-color: rgba(colors.$border-color, .1);
+  }
+}
+
 
 
 .drawer-toggle-icon {
-  height: 24px;
+  height: 100%;
   color: colors.$border-color;
   background-color: rgba(colors.$border-color, .25);
-  
+  border: 1px solid colors.$border-color;
 }
