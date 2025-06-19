@@ -1,0 +1,14 @@
+<div id="main">
+        {% for w in windows.pages %}
+            {% render 'components/window'
+                windowId: w.windowId
+                windowTitle: w.windowTitle
+                windowHeight: w.windowHeight
+                windowWidth: w.windowWidth
+                windowX: w.windowX
+                windowY: w.windowY
+                renderPath: w.renderPath
+                visible: w.visible
+            %}
+        {% endfor %}
+</div>
