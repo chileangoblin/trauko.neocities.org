@@ -10,5 +10,25 @@
     </head>
     <body>
         {{ content }}
+        <div class="frame">
+             <button class="ui window-control expand"></button>
+            <button class="ui window-control close"></button>
+            Framee
+        </div>
     </body>
 </html>
+
+<style>
+    .frame {
+        border-width: 24px; /* matches your slice size */
+        background-color: #946237;
+        border-image-source: url('/assets/ui/frame_9slice.png');
+        border-image-slice: 8; /* slice 8 px from each edge */
+        border-image-repeat: repeat; /* or stretch, depending on your design */
+        image-rendering: pixelated; /* keeps it crisp when scaled */
+        border-style: solid; /* required for border-image to apply */
+        width: 200px;  /* or whatever width you want */
+        height: fit-content; /* or whatever height you want */
+        font-size: 32px;
+    }
+</style>

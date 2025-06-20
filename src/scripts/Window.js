@@ -8,6 +8,7 @@ export default class Window {
     this.element = element;
     this.id = element.dataset.id;
     this.parent = element.parentElement;
+    this.overlay = document.querySelector('#overlay');
     this.header = this.element.querySelector('.window-header');
     this.controls = {
       close: this.element.querySelector('.window-control.close'),
@@ -89,17 +90,19 @@ export default class Window {
       height: this.element.offsetHeight
     };
 
-    const maxWidth = 800;
+    const maxWidth = 700;
     const targetWidth = Math.min(maxWidth, parentRect.width * 0.9);
 
     const targetLeft = (this.parent.clientWidth - targetWidth) / 2;
-    const targetTop = 0;
+    const targetTop = 20;
 
     this.element.style.transition = 'all 0.3s ease';
     this.element.style.width = `${targetWidth}px`;
     this.element.style.left = `${targetLeft}px`;
     this.element.style.top = `${targetTop}px`;
-
+    this.overlay.style.opacity = '1';
+    this.overlay.style.pointerEvents = 'auto';
+    this.overlay.style.zIndex = (Window.highestZIndex - 1).toString();
     this.state.expanded = true;
   }
 
@@ -119,7 +122,8 @@ export default class Window {
         }
     };
     this.element.addEventListener('transitionend', onRestoreTransitionEnd);
-
+    this.overlay.style.opacity = '0';
+    this.overlay.style.pointerEvents = 'none';
     this.state.expanded = false;
   }
 

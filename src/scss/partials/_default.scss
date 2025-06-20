@@ -1,10 +1,8 @@
 .default-container {
     line-height: 0;
-    width: 100%;
-
+    max-width: 256px;
 }
 
 .default-image {
-    width: 256px;
-    max-width: 100%;
+    width: 100%;
 }

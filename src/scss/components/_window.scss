@@ -5,6 +5,12 @@
     min-width: 200px;
     transition: transform 0.1s ease;
     transition: box-shadow 0.1s ease;
+    background-color: red;
+    border: 1px solid black;
+    margin: auto;
+
+
+    
 }
 
 .hidden {
@@ -13,19 +19,33 @@
 
 .window-body {
     height: fit-content;
-    border-left: 3px solid colors.$border-color;
-    border-right: 3px solid colors.$border-color;
-    border-bottom: 3px solid colors.$border-color;
+    width: 100%;
     background-color: colors.$bg-color;
     color: black;
+    overflow-y: scroll;
+    border-width: 8px; /* matches your slice size */
+    background-color: #fff3ea;
+    border-image-source: url('/assets/ui/window_content_9slice.png');
+    border-image-slice: 8; /* slice 8 px from each edge */
+    border-image-repeat: repeat; /* or stretch, depending on your design */
+    image-rendering: pixelated; /* keeps it crisp when scaled */
+    border-style: solid; /* required for border-image to apply */
+    max-height: 200px;
 }
 
 .window-header {
     display: flex;
-    background-color: colors.$border-color;
+    // background-color: colors.$border-color;
+    border-width: 8px; /* matches your slice size */
+        background-color: #946237;
+        border-image-source: url('/assets/ui/frame_9slice.png');
+        border-image-slice: 8; /* slice 8 px from each edge */
+        border-image-repeat: repeat; /* or stretch, depending on your design */
+        image-rendering: pixelated; /* keeps it crisp when scaled */
+        border-style: solid; /* required for border-image to apply */
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5px;
+    padding: 0 2px;
     font-size: 1.35rem;
 
 }
@@ -42,7 +62,7 @@
 
 .window-control {
     cursor: default;
-    border: 1.5px solid white;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +70,31 @@
     &:hover {
         background-color: rgba(black, .1);
     }
+
+    
+}
+
+.window-control.expand {
+    background-image: url("/assets/ui/button_expand.png");
+    background-size: cover;
+    height: 24px;
+    width: 21px;
+
+    &:hover {
+        background-image: url("/assets/ui/button_expand_hover.png");
+        cursor: pointer;
+    }    
+}
+
+.window-control.close {
+    background-image: url("/assets/ui/button_close.png");
+    background-size: cover;
+    height: 24px;
+    width: 21px;
+
+    &:hover {
+        background-image: url("/assets/ui/button_close.png");
+    }    
 }
 
 .window.dragging {
