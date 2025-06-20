@@ -2,10 +2,10 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url("https://i.redd.it/30um0rwun2d01.png");
+    background-color: rgba(black, .9);
     image-rendering: pixelated;
-    background-color: rgba(white, .5);
-    background-size: cover;
+    // background-color: rgba(white, .5);
+    background-size: contain;
     opacity: 0;
     z-index: 0;
     pointer-events: none; /* So clicks pass through when hidden */
