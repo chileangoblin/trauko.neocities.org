@@ -1,4 +1,5 @@
 @use '../abstract/colors';
+@use '../abstract/fonts';
 
 .window {
     position: absolute;
@@ -6,11 +7,7 @@
     transition: transform 0.1s ease;
     transition: box-shadow 0.1s ease;
     background-color: red;
-    border: 1px solid black;
-    margin: auto;
-
-
-    
+    margin: auto; 
 }
 
 .hidden {
@@ -22,27 +19,27 @@
     width: 100%;
     background-color: colors.$bg-color;
     color: black;
-    overflow-y: scroll;
+
     border-width: 8px; /* matches your slice size */
     background-color: #fff3ea;
-    border-image-source: url('/assets/ui/window_content_9slice.png');
+    border-image-source: url('/assets/ui/window_content_9slice_new.png');
     border-image-slice: 8; /* slice 8 px from each edge */
     border-image-repeat: repeat; /* or stretch, depending on your design */
     image-rendering: pixelated; /* keeps it crisp when scaled */
     border-style: solid; /* required for border-image to apply */
-    max-height: 200px;
+
 }
 
 .window-header {
     display: flex;
     // background-color: colors.$border-color;
     border-width: 8px; /* matches your slice size */
-        background-color: #946237;
-        border-image-source: url('/assets/ui/frame_9slice.png');
-        border-image-slice: 8; /* slice 8 px from each edge */
-        border-image-repeat: repeat; /* or stretch, depending on your design */
-        image-rendering: pixelated; /* keeps it crisp when scaled */
-        border-style: solid; /* required for border-image to apply */
+    background-color: #946237;
+    border-image-source: url('/assets/ui/frame_9slice.png');
+    border-image-slice: 8; /* slice 8 px from each edge */
+    border-image-repeat: repeat; /* or stretch, depending on your design */
+    image-rendering: pixelated; /* keeps it crisp when scaled */
+    border-style: solid; /* required for border-image to apply */
     justify-content: space-between;
     align-items: center;
     padding: 0 2px;
@@ -52,6 +49,10 @@
 
 .window-title {
     user-select: none;
+    font-family: fonts.$display-font;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
 }
 
 .window-controls {
@@ -90,10 +91,11 @@
     background-image: url("/assets/ui/button_close.png");
     background-size: cover;
     height: 24px;
-    width: 21px;
+    width: 24px;
 
     &:hover {
-        background-image: url("/assets/ui/button_close.png");
+        background-image: url("/assets/ui/button_close_hover.png");
+        
     }    
 }
 

@@ -3,4 +3,10 @@
     src: url("/assets/fonts/Alkhemikal.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: 'RasterForgeRegular-JpBgm';
+    src: url("/assets/fonts/scream_when_youre_ready_to_die.ttf") format("truetype");
+}
+
 $body-font: 'Jersey 15';
+$display-font: 'RasterForgeRegular-JpBgm';

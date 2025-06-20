@@ -1,9 +1,6 @@
 @use '../abstract/colors';
 
 .status-container {
-    background-color: rgb(48, 83, 24);
-    color: colors.$text-color;
-    border:2px solid white;
     padding: 5px 0px;
     font-size: 1.3rem;
 }
