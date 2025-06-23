@@ -1,0 +1,101 @@
+{% assign name = name | default: "Example Window" %}
+{% assign id = id | default: "example_window" %}
+{% assign path = path | default: "lib/pages/example" %}
+{% assign type = type | default: "page" %}
+{% case type %}
+    {% when 'page' %}
+        <div data-id="{{ id }}" data-type="{{ type }}" class="window-container" style="left: {{ x }}px; top: {{ y }}px; height: {{ height }}px; width: {{ width }}px">
+            <div class="window-titlebar">
+                <span class="window-title">{{ name }}</span>
+                <div class="window-controls">
+                    <button class="window-button expand">Resize Button</button>
+                    <button class="window-button close">Close Button</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="window-content">
+                    {% render path %}
+                </div>
+                <div class="scrollbar">
+                    <div class="scrollbar-corner top"></div>
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                    <div class="scrollbar-corner bottom"></div>
+                </div>
+            </div>
+        </div>
+    
+    {% when 'widget' %}
+    <div data-id="{{ id }}" data-type="{{ type }}" class="window-container" style="left: {{ x }}px; top: {{ y }}px">
+        <div class="window-titlebar">
+            <span class="window-title">{{ name }}</span>
+            <div class="window-controls">
+                <button class="window-button expand">Resize Button</button>
+                <button class="window-button close">Close Button</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="window-content">
+                {% render path %}
+            </div>
+            <div class="scrollbar">
+                <div class="scrollbar-corner top"></div>
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                </div>
+                <div class="scrollbar-corner bottom"></div>
+            </div>
+        </div>
+    </div>
+    
+    {% when 'media' %}
+        {% case mediaType %}
+            {% when 'image' %}
+                <div data-id="{{ id }}" data-type="{{ type }}" class="window-container" style="left: {{ x }}px; top: {{ y }}px">
+                <div class="window-titlebar">
+                    <span class="window-title">{{ name }}</span>
+                    <div class="window-controls">
+                        <button class="window-button expand">Resize Button</button>
+                        <button class="window-button close">Close Button</button>
+                    </div>
+                </div>
+                    <div class="window-body">
+                        <div class="window-content">
+                            <img src="{{ url }}" alt="{{ name }}">
+                        </div>
+                        <div class="scrollbar">
+                            <div class="scrollbar-corner top"></div>
+                            <div class="scrollbar-track">
+                                <div class="scrollbar-thumb"></div>
+                            </div>
+                            <div class="scrollbar-corner bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            {% when 'video' %}
+                <div data-id="{{ id }}" data-type="{{ type }}" class="window-container" style="left: {{ x }}px; top: {{ y }}px">
+                <div class="window-titlebar">
+                    <span class="window-title">{{ name }}</span>
+                    <div class="window-controls">
+                        <button class="window-button expand">Resize Button</button>
+                        <button class="window-button close">Close Button</button>
+                    </div>
+                </div>
+                    <div class="window-body">
+                        <div class="window-content">
+                            <video controls>
+                                <source src="{{ url }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="scrollbar">
+                            <div class="scrollbar-corner top"></div>
+                            <div class="scrollbar-track">
+                                <div class="scrollbar-thumb"></div>
+                            </div>
+                            <div class="scrollbar-corner bottom"></div>
+                        </div>
+                    </div>
+                </div>
+    {% endcase %}
+{% endcase %}

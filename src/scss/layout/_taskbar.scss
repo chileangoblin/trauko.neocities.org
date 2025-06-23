@@ -1,0 +1,47 @@
+@use '../abstract/fonts';
+@use '../abstract/colors';
+
+.taskbar {
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    background-color: #81764b;
+    color: colors.$panel-bg-color;
+    font-family: fonts.$body-font;
+    font-size: 1rem;
+}
+
+.taskbar-start {
+    margin-right: 40px;
+}
+
+.taskbar-tabs {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.taskbar-tab {
+    padding: 5px 5px;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+        background-color: rgba(black, .5);
+    }
+}
+
+.drawer {
+    position: fixed;
+    bottom: 26px;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(black, .5);
+    z-index: 9999999;
+    display: none;
+    border-top: 4px solid #81764b;
+}

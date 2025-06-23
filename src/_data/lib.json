@@ -1,0 +1,68 @@
+{
+    "pages": [
+        {
+            "id": "example-page",
+            "name": "Example Page",
+            "width": 500,
+            "height": 400,
+            "x": 0,
+            "y": 0,
+            "path": "lib/pages/example.liquid",
+            "options": {
+                "visible": false,
+                "ignoreOnBuild": true
+            }
+        }
+    ],
+    "widgets": [
+        {
+            "id": "example-widget",
+            "name": "Example Widget",
+            "x": 750,
+            "y": 20,
+            "path": "lib/widgets/example.liquid",
+            "options": {
+                "visible": false,
+                "ignoreOnBuild": true
+            }
+        }
+    ],
+    "media": [
+        {
+            "id": "example-image",
+            "name": "example-image",
+            "x": 500,
+            "y": 20,
+            "url": "assets/images/shroom_parallax.gif",
+            "mediaType": "image",
+            "options": {
+                "visible": false,
+                "ignoreOnBuild": true
+            }
+        },
+        {
+            "id": "example-video",
+            "name": "example-video",
+            "x": 700,
+            "y": 40,
+            "url": "assets/videos/rin.mp4",
+            "mediaType": "video",
+            "options": {
+                "visible": false,
+                "ignoreOnBuild": true
+            }
+        },
+        {
+            "id": "example-embed",
+            "name": "example-embed",
+            "x": 900,
+            "y": 60,
+            "url": "https://www.youtube.com/watch?v=k8ozVkIkr-g",
+            "mediaType": "embed",
+            "options": {
+                "visible": false,
+                "ignoreOnBuild": true
+            }
+        }
+    ]
+}

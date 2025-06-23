@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Alkhemikal';
+    src: url("/assets/fonts/Alkhemikal.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Scream When Youre Ready To Die';
+    src: url("/assets/fonts/scream_when_youre_ready_to_die.woff2") format("woff2");
+}
+
+$body-font: 'Alkhemikal';
+$display-font: 'Scream When Youre Ready To Die';

@@ -1,0 +1,13 @@
+@use '../abstract/colors';
+@use '../abstract/fonts';
+
+body {
+    font-family: fonts.$body-font;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    background-color: colors.$bg-color;
+    position: relative;
+}

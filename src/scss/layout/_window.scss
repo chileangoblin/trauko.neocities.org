@@ -1,0 +1,18 @@
+.window-container {
+    position: absolute;
+    background-color: red;
+    max-height: 500px;
+    height: 200px;
+    width: 200px;
+}
+
+.window-titlebar {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.window-controls {
+    display: flex;
+
+}

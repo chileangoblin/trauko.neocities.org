@@ -1,0 +1,42 @@
+<div class="desktop">
+    {% for page in lib.pages %}
+        {% render 'layout/window' 
+            type: 'page'
+            id: page.id
+            name: page.name
+            width: page.width
+            height: page.height
+            x: page.x
+            y: page.y
+            path: page.path
+        %}
+    {% endfor %}
+    
+    {% for widget in lib.widgets %}
+        {% render 'layout/window' 
+            type: 'widget'
+            id: widget.id
+            name: widget.name
+            width: widget.width
+            height: widget.height
+            x: widget.x
+            y: widget.y
+            path: widget.path
+        %}
+    {% endfor %}
+
+    {% comment %} {% for media in lib.media %}
+        {% render 'layout/window' 
+            type: 'media'
+            id: media.id
+            mediaType: media.mediaType
+            name: media.name
+            width: media.width
+            height: media.height
+            x: media.x
+            y: media.y
+            path: media.path
+            url: media.url
+        %}
+    {% endfor %} {% endcomment %}
+</div>

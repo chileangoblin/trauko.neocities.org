@@ -1,0 +1,73 @@
+@use "../abstract/colors";
+
+/* Full screen overlay */
+#preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: colors.$bg-color;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#start-button {
+  font-size: 6rem;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  visibility: hidden;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: #81764b;
+  }
+}
+
+.disclaimer {
+  border-width: 8px 8px 8px 8px;
+  border-image-source: url('/assets/ui/frame.png');
+  border-image-slice: 8;
+  border-image-repeat: repeat; 
+  border-style: solid;
+
+  background-color: #81764b;
+  color: #fff3ea;
+  visibility: hidden;
+}
+
+.preloader-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 8px solid #81764b;
+  
+}
+
+.preloader-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.loading-text {
+  display: block;
+  font-size: 6rem;
+
+}
+
+.preloader-image {
+  user-select: none;
+}
