@@ -4,7 +4,7 @@
 #preloader {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: #1e090f;
+  background: black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,47 @@
   color: white;
   margin: auto;
   text-align: center;
+}
+
+.loading-bar {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.loading-bar h1 {
+  font-size: 80px;
+}
+
+.shroom {
+  display: block;
+  margin-top: 48px;
+  height: 48px;
+  width: 48px;
+}
+
+.shroom.active {
+  background-image: url('/assets/ui/shroom.png');
+  background-size: contain;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.bracket-start, .bracket-end {
+  display: block;
+  height: 48px;
+  width: 48px;
+  background-size: contain;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.bracket-start {
+  background-image: url('/assets/ui/left-bracket.png');
+}
+
+.bracket-end {
+  background-image: url('/assets/ui/right-bracket.png');
 }
 
 .disclaimer {

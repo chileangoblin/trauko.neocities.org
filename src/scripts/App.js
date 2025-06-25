@@ -12,8 +12,5 @@ export default class App {
     init = async () => {
         this.preloader.init();
         this.manager.init();
-
-        this.manager.getWindows();
-
     }
 }

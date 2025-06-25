@@ -55,7 +55,6 @@ export default class Window {
     }
 
     toggleExpand() {
-
         if (!this.state.expanded) {
             this.state.initialSize = {
                 width: this.element.offsetWidth,
@@ -71,15 +70,15 @@ export default class Window {
             this.element.style.width = `${this.parent.clientWidth}px`;
             this.element.style.height = `${this.parent.clientHeight}px`;
             this.state.expanded = true;
-            } else {
-                // Restore original position and size
+            
+        } else {
                 this.element.style.left = `${this.state.lastPosition.x}px`;
                 this.element.style.top = `${this.state.lastPosition.y}px`;
                 this.element.style.width = `${this.state.initialSize.width}px`;
                 this.element.style.height = `${this.state.initialSize.height}px`;
                 this.state.expanded = false;
-            }
         }
+    }
 
     hide() {
         this.state.visible = false;
