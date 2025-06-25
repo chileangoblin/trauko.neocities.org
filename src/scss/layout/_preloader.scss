@@ -13,18 +13,26 @@
   z-index: 9999;
 }
 
-#start-button {
+#start-button  {
   font-size: 6rem;
   cursor: pointer;
   border: none;
-  border-radius: 6px;
+
   color: white;
   visibility: hidden;
   margin-bottom: 20px;
 
   &:hover {
-    color: #81764b;
+    color: #1b634b;
   }
+}
+
+.loading-text {
+  font-size: 6rem;
+  border: none;
+  color: white;
+  margin: auto;
+  text-align: center;
 }
 
 .disclaimer {
