@@ -1,22 +1,57 @@
 .window-container {
     position: absolute;
     background-color: #ccc;
-    max-height: 500px;
     height: 200px;
     width: 200px;
+    border: 4px solid #563935;
+}
+
+
+
+.window-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #563935;
+    user-select: none;
+    color: white;
     // border-width: 16px;
     // border-style: solid;
     // border-image-source: url('/assets/ui/corners.png');
     // border-image-slice: 8 fill;
     // border-image-repeat: repeat;
+
 }
 
-.window-titlebar {
-    display: flex;
-    justify-content: space-between;
+.window-content {
+    padding: 2.5px;
+    
 }
 
 .window-controls {
     display: flex;
+}
 
+.window-button {
+    height: 16px;
+    width: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    padding: 2.5px;
+    
+    &:hover {
+        background-color: rgba(black, .5);
+        cursor: pointer;
+    }
+}
+
+.window-button.close {
+    background-image: url('/assets/ui/close_button.png');
+
+}
+
+.window-button.expand {
+    background-image: url('/assets/ui/expand_button.png');
 }

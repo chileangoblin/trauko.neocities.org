@@ -5,8 +5,8 @@
             "name": "Example Page",
             "width": 500,
             "height": 400,
-            "x": 0,
-            "y": 0,
+            "x": 400,
+            "y": 120,
             "path": "lib/pages/example.liquid",
             "options": {
                 "visible": false,
@@ -18,8 +18,8 @@
         {
             "id": "example-widget",
             "name": "Example Widget",
-            "x": 750,
-            "y": 20,
+            "x": 1060,
+            "y": 15,
             "path": "lib/widgets/example.liquid",
             "options": {
                 "visible": false,

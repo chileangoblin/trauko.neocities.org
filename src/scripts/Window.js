@@ -14,12 +14,12 @@ export default class Window {
         this.parent = element.parentElement;
 
         this.ui = {
-            titlebar: this.element
+            titlebar: this.element.querySelector('.window-titlebar')
         }
 
         this.controls = {
-            expand: this.element.querySelector('.window-control.expand'),
-            close: this.element.querySelector('.window-control.close')
+            expand: this.ui.titlebar.querySelector('.window-button.expand'),
+            close: this.ui.titlebar.querySelector('.window-button.close')
         }
         
         this.state = {
@@ -37,8 +37,49 @@ export default class Window {
     }
 
     attachEvents() {
+        this.element.addEventListener('mousedown', () => this.manager.bringToFront(this));
         this.ui.titlebar.addEventListener('mousedown', this.onTitlebarDragStart);
+        this.controls.expand.addEventListener('click', () => this.toggleExpand());
+        this.controls.close.addEventListener('click', () => this.toggleVisible());
     }
+
+    toggleVisible() {
+        this.state.visible = !this.state.visible;
+        this.element.style.display = this.state.visible ? 'block' : 'none';
+
+        if (this.state.visible) {
+            this.manager.bringToFront(this);
+        }
+
+        this.manager.updateToggleState(this.id, this.state.visible);
+    }
+
+    toggleExpand() {
+
+        if (!this.state.expanded) {
+            this.state.initialSize = {
+                width: this.element.offsetWidth,
+                height: this.element.offsetHeight
+            };
+            this.state.lastPosition = {
+                x: this.element.offsetLeft,
+                y: this.element.offsetTop
+            };
+
+            this.element.style.left = '0px';
+            this.element.style.top = '0px';
+            this.element.style.width = `${this.parent.clientWidth}px`;
+            this.element.style.height = `${this.parent.clientHeight}px`;
+            this.state.expanded = true;
+            } else {
+                // Restore original position and size
+                this.element.style.left = `${this.state.lastPosition.x}px`;
+                this.element.style.top = `${this.state.lastPosition.y}px`;
+                this.element.style.width = `${this.state.initialSize.width}px`;
+                this.element.style.height = `${this.state.initialSize.height}px`;
+                this.state.expanded = false;
+            }
+        }
 
     hide() {
         this.state.visible = false;
@@ -83,7 +124,6 @@ export default class Window {
             windowX: this.element.offsetLeft,
             windowY: this.element.offsetTop
         };
-
         this.element.style.transition = 'transform 0.1s ease';
         this.element.style.transform = 'scale(1.05)';
         this.element.style.boxShadow = '0 8px 16px rgba(0,0,0,0.3)';
@@ -92,7 +132,7 @@ export default class Window {
     onTitlebarDragStart = (e) => {
         e.preventDefault();
         
-        if (e.target.closest('.window-control')) {
+        if (e.target.closest('.window-button')) {
             return;
         }
 
@@ -100,7 +140,6 @@ export default class Window {
             return;
         }
 
-        this.manager.bringToFront(this);
         this.startDrag(e.clientX, e.clientY);
         document.addEventListener('mousemove', this.onTitlebarDragMove);
         document.addEventListener('mouseup', this.onTitlebarDragEnd);
@@ -134,6 +173,7 @@ export default class Window {
 
         this.element.style.transform = '';
         this.element.style.boxShadow = '';
+        this.element.style.transition = 'all 0.3s ease';
 
         this.state.lastPosition = {
         x: this.element.offsetLeft,

@@ -15,6 +15,8 @@
 
 .taskbar-start {
     margin-right: 40px;
+    user-select: none;
+    cursor: not-allowed;
 }
 
 .taskbar-tabs {
@@ -46,8 +48,34 @@
     left: 0;
     height: 300px;
     width: 100%;
-    background-color: rgba(black, .5);
+    background-color: rgba(#563935, .5);
     z-index: 9999999;
     display: none;
-    border-top: 4px solid #81764b;
+    border-top: 4px solid #563935;
+}
+
+.pages-section, .widgets-section {
+    padding: 5px 15px;
+}
+
+.section-title {
+    user-select: none;
+}
+
+.toggle {
+    display: inline-block;
+    padding: 2.5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle.active {
+    background-color: #539e84;
+}
+
+.terminal {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#0a3e34, .5);
+    padding: 5px 15px;
 }

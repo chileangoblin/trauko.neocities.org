@@ -10,14 +10,29 @@
         </div>
         <div id="taskbar-windows-manager" class="taskbar-tab">
             <img src="assets/ui/window_icon.png">
-            <span class="taskbar-text">Windows Manager</span>
+            <span class="taskbar-text">Windows & Widgets</span>
         </div>
     </div>
     <div class="taskbar-system">
         <time id="current-time">13:00:00</time>
     </div>
     <div class="drawer">
-        <div id="drawer-terminal" class="terminal" style="display: none">Terminal</div>
-        <div id="drawer-windows-manager" class="windows-manager" style="display: none">Windows Manager</div>
+        <div data-drawer-id="drawer-terminal" class="terminal" style="display: none">
+            <div class="terminal-container">> Under construction...</div>
+        </div>
+        <div data-drawer-id="drawer-windows-manager" class="windows-manager" >
+            <div class="pages-section">
+                <h3 class="section-title">Pages</h3>
+                {% for page in lib.pages %}
+                    <div class="toggle" data-id="{{ page.id }}">{{ page.name }}</div>
+                {% endfor %}
+            </div>
+            <div class="widgets-section">
+                <h3 class="section-title">Widgets</h3>
+                {% for widget in lib.widgets %}
+                    <div class="toggle" data-id="{{ widget.id }}">{{ widget.name }}</div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>

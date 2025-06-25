@@ -4,7 +4,7 @@
 #preloader {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: colors.$bg-color;
+  background: #1e090f;
   color: white;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,6 @@
 
 #start-button {
   font-size: 6rem;
-
   cursor: pointer;
   border: none;
   border-radius: 6px;
@@ -34,7 +33,6 @@
   border-image-slice: 8;
   border-image-repeat: repeat; 
   border-style: solid;
-
   background-color: #81764b;
   color: #fff3ea;
   visibility: hidden;
@@ -45,9 +43,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border: 8px solid #81764b;
-  
+  width: 1280px;
+  height: 720px;
+  background-color: black;  
 }
 
 .preloader-content {
