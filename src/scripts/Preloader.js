@@ -27,7 +27,7 @@ export default class Preloader {
 
     loadResources = async () => {
         const imagePaths = [
-            '/assets/ui/frame.png',
+            '/assets/images/bg.gif',
         ];
 
         const modulePaths = [
