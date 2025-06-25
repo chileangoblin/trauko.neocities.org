@@ -1,13 +1,17 @@
 .window-container {
     position: absolute;
-    background-color: red;
+    background-color: #ccc;
     max-height: 500px;
     height: 200px;
     width: 200px;
+    // border-width: 16px;
+    // border-style: solid;
+    // border-image-source: url('/assets/ui/corners.png');
+    // border-image-slice: 8 fill;
+    // border-image-repeat: repeat;
 }
 
 .window-titlebar {
-    background-color: blue;
     display: flex;
     justify-content: space-between;
 }

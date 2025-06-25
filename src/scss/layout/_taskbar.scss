@@ -7,7 +7,7 @@
     display: flex;
     width: 100%;
     bottom: 0;
-    background-color: #81764b;
+    background-color: #563935;
     color: colors.$panel-bg-color;
     font-family: fonts.$body-font;
     font-size: 1rem;
@@ -19,15 +19,21 @@
 
 .taskbar-tabs {
     display: flex;
+    align-items: center;
     flex: 1;
     gap: 20px;
+    
 }
 
 .taskbar-tab {
+    height: 100%;
     padding: 5px 5px;
     user-select: none;
     cursor: pointer;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     &:hover,
     &.active {
         background-color: rgba(black, .5);
@@ -35,7 +41,7 @@
 }
 
 .drawer {
-    position: fixed;
+    position: absolute;
     bottom: 26px;
     left: 0;
     height: 300px;

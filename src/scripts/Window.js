@@ -14,7 +14,7 @@ export default class Window {
         this.parent = element.parentElement;
 
         this.ui = {
-            titlebar: this.element.querySelector('.window-titlebar'),
+            titlebar: this.element
         }
 
         this.controls = {

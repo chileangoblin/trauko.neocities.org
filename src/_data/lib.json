@@ -57,7 +57,7 @@
             "name": "example-embed",
             "x": 900,
             "y": 60,
-            "url": "https://www.youtube.com/watch?v=k8ozVkIkr-g",
+            "url": "",
             "mediaType": "embed",
             "options": {
                 "visible": false,
