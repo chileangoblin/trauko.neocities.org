@@ -31,7 +31,7 @@ export default class Preloader {
         const totalResources = imagePaths.length + modulePaths.length;
         let loadedCount = 0;
 
-        const miniDelay = 300; // ← You can tweak this
+        const miniDelay = 1000; // ← You can tweak this
 
         const updateProgress = () => {
             loadedCount++;

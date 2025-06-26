@@ -8,8 +8,8 @@
             <div class="window-titlebar">
                 <span class="window-title">{{ name }}</span>
                 <div class="window-controls">
-                    <button class="window-button expand"></button>
-                    <button class="window-button close"></button>
+                    <button class="window-button expand" data-action="expand"></button>
+                    <button class="window-button close" data-action="close"></button>
                 </div>
             </div>
             <div class="window-body">
@@ -31,7 +31,7 @@
             <div class="window-titlebar">
                 <span class="window-title">{{ name }}</span>
                 <div class="window-controls">
-                    <button class="window-button expand"></button>
+                    {% comment %} <button class="window-button expand"></button> {% endcomment %}
                     <button class="window-button close"></button>
                 </div>
             </div>

@@ -2,7 +2,7 @@
     "pages": [
         {
             "id": "example-page",
-            "name": "Example Page",
+            "name": "WELCOME",
             "width": 500,
             "height": 400,
             "x": 400,
@@ -17,7 +17,7 @@
     "widgets": [
         {
             "id": "example-widget",
-            "name": "Example Widget",
+            "name": "CLOCK",
             "x": 1060,
             "y": 15,
             "path": "lib/widgets/example.liquid",

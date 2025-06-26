@@ -1,35 +1,56 @@
+@use '../abstract/fonts';
+
 .window-container {
     position: absolute;
-    background-color: #ccc;
+
     height: 200px;
     width: 200px;
-    border: 4px solid #563935;
+    border-width: 16px;
+    border-style: solid;
+    border-image-source: url('/assets/ui/9grid_bg.png');
+    border-image-slice: 8 fill;
+    border-image-repeat: repeat;
 }
 
 
 
 .window-titlebar {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    background-color: #563935;
+    background-color: #351518;
     user-select: none;
     color: white;
-    // border-width: 16px;
-    // border-style: solid;
-    // border-image-source: url('/assets/ui/corners.png');
-    // border-image-slice: 8 fill;
-    // border-image-repeat: repeat;
+    font-family: fonts.$display-font;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
 
+.window-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+   
+}
+
+.window-body {
+    height: 100%;
+    overflow: hidden;
 }
 
 .window-content {
-    padding: 2.5px;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
     
 }
 
 .window-controls {
     display: flex;
+    left: 0;
 }
 
 .window-button {

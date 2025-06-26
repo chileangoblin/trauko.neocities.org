@@ -39,8 +39,13 @@ export default class Window {
     attachEvents() {
         this.element.addEventListener('mousedown', () => this.manager.bringToFront(this));
         this.ui.titlebar.addEventListener('mousedown', this.onTitlebarDragStart);
-        this.controls.expand.addEventListener('click', () => this.toggleExpand());
-        this.controls.close.addEventListener('click', () => this.toggleVisible());
+        this.ui.titlebar.addEventListener('click', (e) => {
+            if (e.target.closest('.window-button.expand')) {
+                this.toggleExpand();
+            } else if (e.target.closest('.window-button.close')) {
+                this.toggleVisible();
+            }
+        });
     }
 
     toggleVisible() {

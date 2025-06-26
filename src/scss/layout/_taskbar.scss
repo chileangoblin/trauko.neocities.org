@@ -5,9 +5,14 @@
     padding: 0 10px;
     align-items: center;
     display: flex;
-    width: 100%;
+    width: 95%;
     bottom: 0;
-    background-color: #563935;
+    
+    border-width: 16px;
+    border-style: solid;
+    border-image-source: url('/assets/ui/9grid_taskbar_bg.png');
+    border-image-slice: 8 fill;
+    border-image-repeat: repeat;
     color: colors.$panel-bg-color;
     font-family: fonts.$body-font;
     font-size: 1rem;
@@ -24,22 +29,45 @@
     align-items: center;
     flex: 1;
     gap: 20px;
-    
+    position: relative;
 }
 
 .taskbar-tab {
     height: 100%;
-    padding: 5px 5px;
+    position: absolute;
     user-select: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+
+    border-width: 16px;
+    border-style: solid;
+    border-image-source: url('/assets/ui/9grid_button_bg.png');
+    border-image-slice: 8 fill;
+    border-image-repeat: repeat;
+
+    &:nth-child(1) {
+        left: 0;
+    }
+
+    &:nth-child(2) {
+        left: 11%;
+    }
+
     &:hover,
     &.active {
         background-color: rgba(black, .5);
     }
+}
+
+.taskbar-icon {
+    height: 16px;
+    width: 16px;
+    image-rendering: pixelated;
+
+    
 }
 
 .drawer {
